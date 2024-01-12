@@ -9,8 +9,8 @@ function changetheme() {
     if (currentTheme === 'dark') rootHtml.setAttribute("data-theme", "light")
     else rootHtml.setAttribute("data-theme", "dark")
 
-    theme.classList.toggle("bi-cloud-sun");
-    theme.classList.toggle("bi-cloud-moon");
+    theme.classList.toggle("bi-cloud-sun-fill");
+    theme.classList.toggle("bi-cloud-moon-fill");
 }
 
 theme.addEventListener("click", changetheme);
@@ -23,3 +23,7 @@ menuLinks.forEach(intem => {
         intem.classList.add("active");
     })
 })
+
+
+// function
+
