@@ -7,6 +7,7 @@
     --secondary-bg-color: #28292E;
     --primary-boder-color: #28292E;
     --secondary-border-color: #56575A;
+    --head-color: #534f55;
 
     --title-color: #ffd700;
     --text-color: #b89e14;
@@ -21,11 +22,13 @@
     --secondary-bg-color: #C7C8C9;
     --primary-boder-color: #C7C8C9;
     --secondary-border-color: #9A9A9C;
+    --head-color: #959196;
 
     --title-color: #0B080F;
     --text-color: #28292E;
     --link-color: #28292E;
     --icon-color: #9A9A9C;
+
 }
 
 

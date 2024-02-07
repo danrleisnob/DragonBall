@@ -1,35 +1,39 @@
 async function fetchDragon() {
-  try {
-      const response = await fetch('https://dragonball-api.com/api/characters/3');
+    try {
+      const response = await fetch('https://dragonball-api.com/api/characters/1');
       const data = await response.json();
+  
       const tipoName = document.querySelector('#nome');
       const tipoElement = document.querySelector('#tipo');
       const tipoGenero = document.querySelector('#genero');
       const tipoKiBase = document.querySelector('#kibase');
       const tipoKiTotal = document.querySelector('#kitotal');
       const tipoAfiliacao = document.querySelector('#afiliacao');
-
+      const img = document.querySelector('#imagem');
+  
       if (Array.isArray(data)) {
-          tipoName.innerText = data.map(personagem => personagem.name).join(', ');
-          tipoElement.innerText = data.map(personagem => personagem.race).join(', ');
-          tipoGenero.innerText = data.map(personagem => personagem.gender).join(', ');
-          tipoKiBase.innerText = data.map(personagem => personagem.ki).join(', ');
-          tipoKiTotal.innerText = data.map(personagem => personagem.maxKi).join(', ');
-          tipoAfiliacao.innerText = data.map(personagem => personagem.affiliation).join(', ');
+        tipoName.innerText = data.map(personagem => personagem.name).join(', ');
+        tipoElement.innerText = data.map(personagem => personagem.race).join(', ');
+        tipoGenero.innerText = data.map(personagem => personagem.gender).join(', ');
+        tipoKiBase.innerText = data.map(personagem => personagem.ki).join(', ');
+        tipoKiTotal.innerText = data.map(personagem => personagem.maxKi).join(', ');
+        tipoAfiliacao.innerText = data.map(personagem => personagem.affiliation).join(', ');
+        img.src = data.map(personagem => personagem.image).join(' ');
       } else {
-          tipoName.innerText = data.name;
-          tipoElement.innerText = data.race;
-          tipoGenero.innerText = data.gender;
-          tipoKiBase.innerText = data.ki;
-          tipoKiTotal.innerText = data.maxKi;
-          tipoAfiliacao.innerText = data.affiliation;
+        tipoName.innerText = data.name;
+        tipoElement.innerText = data.race;
+        tipoGenero.innerText = data.gender;
+        tipoKiBase.innerText = data.ki;
+        tipoKiTotal.innerText = data.maxKi;
+        tipoAfiliacao.innerText = data.affiliation;
+        img.src = data.image;
       }
-  } catch (error) {
+    } catch (error) {
       console.error('Erro ao obter dados:', error);
+    }
   }
-}
-
-fetchDragon();
+  
+  fetchDragon();
 
 // async function fetchDragon(id) {
 //   try {
@@ -60,5 +64,5 @@ fetchDragon();
 // }
 
 // // Supondo que você tenha um ID disponível
-// const personagemId = 2;
+// const personagemId = 1;
 // fetchDragon(personagemId);

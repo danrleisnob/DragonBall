@@ -1,0 +1,59 @@
+/* Reset CSS */
+
+/* Reset de margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Inclui o padding e a borda no cálculo do tamanho total do elemento */
+  }
+  
+  /* Definindo estilos básicos para elementos de formulário */
+  input,
+  button,
+  textarea,
+  select {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+  }
+  
+  /* Removendo decoração de lista */
+  ul, ol {
+    list-style: none;
+  }
+  
+  /* Removendo decoração de links */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Removendo estilo padrão para elementos de formulário */
+  button {
+    border: none;
+    background-color: transparent;
+  }
+  
+  /* Reset de estilo padrão para elementos de formulário */
+  input,
+  button,
+  textarea,
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  
+  /* Removendo espaçamento extra entre elementos de formulário */
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    margin: 0;
+  }
+  
+  /* Removendo borda de imagem */
+  img {
+    border-style: none;
+  }
